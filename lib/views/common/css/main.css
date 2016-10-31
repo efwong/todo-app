@@ -1,0 +1,31 @@
+#navbar.logged-in .login-field{
+  display:none;
+}
+#navbar .logout-field{
+  display:none;
+}
+#navbar.logged-in .logout-field{
+  display:block;
+}
+#navbar.logged-in .create-account-field{
+  display:none;
+}
+
+.center{
+  text-align:center;
+}
+.todo-list{
+  list-style-type:none;
+  padding-left:0;
+}
+.todo-list .todo-item .todo-item-input{
+  width: 200px;
+  margin: 10px 5px 10px 10px;
+}
+.todo-list-container .todo-list-col{
+  min-width:300px;
+}
+#add-todo-item-btn{
+  float:left;
+  margin-right:120px;
+}
