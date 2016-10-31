@@ -5,11 +5,9 @@ var stormpath = require('express-stormpath');
 
 var routes = require('./lib/routes');
 var path = require('path');
-/**
- * Create the Express application.
- */
 var app = express();
 
+// keep track of app root path
 global.__approot = path.resolve(__dirname);
 
 /**
@@ -18,7 +16,6 @@ global.__approot = path.resolve(__dirname);
 app.set('trust proxy',true);
 app.set('view engine', 'jade');
 app.set('views', './lib/views/jade');
-//app.locals.siteName = 'My Todo App';
 
 /**
  * Stormpath initialize with customData option */
