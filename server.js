@@ -18,14 +18,10 @@ global.__approot = path.resolve(__dirname);
 app.set('trust proxy',true);
 //app.set('view engine', 'jade');
 //app.set('views', './lib/views');
-app.locals.siteName = 'Express-Stormpath Example Project';
+//app.locals.siteName = 'My Todo App';
 
 /**
- * Stormpath initialization.
- */
-
-console.log('Initializing Stormpath');
-
+ * Stormpath initialize with customData option */
 app.use(stormpath.init(app, {
   expand: {
     customData: true
@@ -37,17 +33,16 @@ app.use(stormpath.init(app, {
  */
 app.use('/', routes);
 
+// load static resource
 app.use('/', express.static(path.join(__dirname, 'lib/views')));
 
+
 app.on('stormpath.ready',function () {
-  console.log('Stormpath Ready');
+  // only start webserver when stormpath is done
+  var port = process.env.PORT || 3000;
+  app.listen(port, function () {
+    console.log('Server listening on http://localhost:' + port);
+  });
 });
 
-/**
- * Start the web server.
- */
-var port = process.env.PORT || 3000;
-app.listen(port, function () {
-  console.log('Server listening on http://localhost:' + port);
-});
 
