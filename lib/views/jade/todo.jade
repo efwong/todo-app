@@ -1,0 +1,21 @@
+extends layout
+
+block vars
+  -var pageTitle = "Todo List"
+
+block js
+  script(src='/todo/todo-item.js')
+  script(src='/todo/todo.js')
+
+block content
+  div.todo-list-container.container
+    div.row
+      div.col-sm-4
+      div.col-sm-4.todo-list
+        h6 Please add items to your todo list
+        form(action="/todo", method="post")
+          ul#todo-list.todo-list
+          div
+            button(type="button")#add-todo-item-btn.todo-item-btn.btn.btn-secondary +
+            button(type="submit", value="Submit")#save-todo-btn.btn.btn-primary Submit
+      div.col-sm-4

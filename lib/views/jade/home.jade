@@ -1,0 +1,15 @@
+extends layout
+
+block vars
+  -var pageTitle = "Home"
+
+block js
+  script(src='/home/home.js')
+
+block content
+  div.row
+    div.span9
+    h3.center
+      span Welcome 
+        span#user-name
+        span  !

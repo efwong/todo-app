@@ -1,0 +1,27 @@
+nav#navbar.navbar.navbar-default.logged-in
+  .container-fluid
+    .navbar-header
+      button(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1",aria-expanded="false").navbar-toggle.collpased
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(href="/").navbar-brand Todo App
+
+    div.collapse.navbar-collapse#bs-example-navbar-collapse-1
+      ul.nav.navbar-nav
+        li#home-tab
+          a(href="/")
+            span Home
+            span.sr-only (current)
+        li#todo-tab
+          a(href="/todo") Todo
+
+      form(action="/logout", method="post")#logout-action
+        ul.nav.navbar-nav.navbar-right
+          li.login-field
+            a(href="/login") Login
+          li.logout-field
+            a(href="#", onclick="document.getElementById('logout-action').submit();")#logout Logout
+          li.create-account-field
+            a(href="/register") Create Account

@@ -16,8 +16,8 @@ global.__approot = path.resolve(__dirname);
  * Application settings.
  */
 app.set('trust proxy',true);
-//app.set('view engine', 'jade');
-//app.set('views', './lib/views');
+app.set('view engine', 'jade');
+app.set('views', './lib/views/jade');
 //app.locals.siteName = 'My Todo App';
 
 /**

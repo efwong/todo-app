@@ -1,0 +1,17 @@
+block vars
+    - var pageTitle = (pageTitle)? pageTitle : "Todo App"
+doctype
+html(lang="en")
+    head
+        title= pageTitle
+        link(href='/resources/bootstrap.min.css', rel='stylesheet')
+        link(href='/common/css/main.css', rel='stylesheet')
+        script(src='/resources/jquery-3.1.1.min.js')
+        script(src='/resources/bootstrap.min.js')
+        script(src='/common/js/service.js')
+        script(src='/common/js/nav.js')
+        
+        block js
+    body
+        include navbar
+        block content
