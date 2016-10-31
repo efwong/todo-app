@@ -2,6 +2,10 @@
 
 by Edwin Wong
 
+### Feautures
+1. Uses Stormpath for User authentication and management (Get User, Update User, User validation, Forgot Password)
+
+2. Implements a todo list.  Allows users to add a list of todo items (strings) to their custom data.
 
 ### Notes
 
